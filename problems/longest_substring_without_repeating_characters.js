@@ -33,22 +33,27 @@ var lengthOfLongestSubstring = function(s) {
 /* ********************************************************
  * ********************************************************
  * ********************************************************/
-test_calls = {
-    "abcabcbb": 3,
-    "bbbbb": 1,
-    "pwwkew": 3,
-    "au": 2,
-    " ": 1,
-    "": 0,
-    "aab": 2,
-};
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('-----------------------------------------------------------------------');
+    console.log('longest_substring_without_repeating_characters.js');
 
-Object.entries(test_calls).forEach(
-    entry => {
-        const [string, expected_count] = entry;
-        let result = lengthOfLongestSubstring(string);
-        console.log(
-            `${expected_count === result ? 'Passed' : 'FAILED'} -- ${string} -- Expected: ${expected_count}, Actual: ${result}`
-        );
-    }
-);
+    test_calls = {
+        "abcabcbb": 3,
+        "bbbbb": 1,
+        "pwwkew": 3,
+        "au": 2,
+        " ": 1,
+        "": 0,
+        "aab": 2,
+    };
+
+    Object.entries(test_calls).forEach(
+        entry => {
+            const [string, expected_count] = entry;
+            let result = lengthOfLongestSubstring(string);
+            console.log(
+                `${expected_count === result ? 'Passed' : 'FAILED'} -- ${string} -- Expected: ${expected_count}, Actual: ${result}`
+            );
+        }
+    );
+});

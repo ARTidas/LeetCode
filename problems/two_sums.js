@@ -25,29 +25,34 @@ var twoSum = function(nums, target) {
 /* ********************************************************
  * ********************************************************
  * ********************************************************/
-test_calls = [
-    {
-        "input": [[2,7,11,15], 9],
-        "output": [0,1]
-    },
-    {
-        "input": [[3,2,4], 6],
-        "output": [1,2]
-    },
-    {
-        "input": [[3,3], 6],
-        "output": [0, 1]
-    },
-];
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('-----------------------------------------------------------------------');
+    console.log('two_sums.js');
 
-Object.entries(test_calls).forEach(
-    test_call => {
-        const [index, test_parameters] = test_call;
-
-        let result = twoSum(test_parameters["input"][0], test_parameters["input"][1]);
-        console.log(
-            `${result.toString() === test_parameters["output"].toString() ? 'Passed' : 'FAILED'} -- ${test_parameters["input"][0]}, ${test_parameters["input"][1]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
-        );
-        
-    }
-);
+    test_calls = [
+        {
+            "input": [[2,7,11,15], 9],
+            "output": [0,1]
+        },
+        {
+            "input": [[3,2,4], 6],
+            "output": [1,2]
+        },
+        {
+            "input": [[3,3], 6],
+            "output": [0, 1]
+        },
+    ];
+    
+    Object.entries(test_calls).forEach(
+        test_call => {
+            const [index, test_parameters] = test_call;
+    
+            let result = twoSum(test_parameters["input"][0], test_parameters["input"][1]);
+            console.log(
+                `${result.toString() === test_parameters["output"].toString() ? 'Passed' : 'FAILED'} -- ${test_parameters["input"][0]}, ${test_parameters["input"][1]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
+            );
+            
+        }
+    );
+});

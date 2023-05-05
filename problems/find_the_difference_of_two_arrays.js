@@ -28,25 +28,30 @@ var findDifference = function(nums1, nums2) {
 /* ********************************************************
  * ********************************************************
  * ********************************************************/
-test_calls = [
-    {
-        "input": [[1,2,3], [2,4,6]],
-        "output": [[1,3],[4,6]]
-    },
-    {
-        "input": [[1,2,3,3], [1,1,2,2]],
-        "output": [[3],[]]
-    },
-];
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('-----------------------------------------------------------------------');
+    console.log('find_the_difference_of_two_arrays.js');
+    
+    test_calls = [
+        {
+            "input": [[1,2,3], [2,4,6]],
+            "output": [[1,3],[4,6]]
+        },
+        {
+            "input": [[1,2,3,3], [1,1,2,2]],
+            "output": [[3],[]]
+        },
+    ];
 
-Object.entries(test_calls).forEach(
-    test_call => {
-        const [index, test_parameters] = test_call;
-
-        let result = twoSum(test_parameters["input"][0], test_parameters["input"][1]);
-        console.log(
-            `${result.toString() === test_parameters["output"].toString() ? 'Passed' : 'FAILED'} -- ${test_parameters["input"][0]}, ${test_parameters["input"][1]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
-        );
-        
-    }
-);
+    Object.entries(test_calls).forEach(
+        test_call => {
+            const [index, test_parameters] = test_call;
+    
+            let result = findDifference(test_parameters["input"][0], test_parameters["input"][1]);
+            console.log(
+                `${result.toString() === test_parameters["output"].toString() ? 'Passed' : 'FAILED'} -- ${test_parameters["input"][0]}, ${test_parameters["input"][1]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
+            );
+            
+        }
+    );
+});

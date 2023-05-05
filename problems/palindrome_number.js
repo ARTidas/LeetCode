@@ -20,29 +20,34 @@ var isPalindrome = function(x) {
 /* ********************************************************
  * ********************************************************
  * ********************************************************/
-test_calls = [
-    {
-        "input": 121,
-        "output": true
-    },
-    {
-        "input": -121,
-        "output": false
-    },
-    {
-        "input": 10,
-        "output": false
-    },
-];
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('-----------------------------------------------------------------------');
+    console.log('palindrome_number.js');
 
-Object.entries(test_calls).forEach(
-    test_call => {
-        const [index, test_parameters] = test_call;
+    test_calls = [
+        {
+            "input": 121,
+            "output": true
+        },
+        {
+            "input": -121,
+            "output": false
+        },
+        {
+            "input": 10,
+            "output": false
+        },
+    ];
 
-        let result = isPalindrome(test_parameters["input"]);
-        console.log(
-            `${result === test_parameters["output"] ? 'Passed' : 'FAILED'} -- ${test_parameters["input"]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
-        );
-        
-    }
-);
+    Object.entries(test_calls).forEach(
+        test_call => {
+            const [index, test_parameters] = test_call;
+    
+            let result = isPalindrome(test_parameters["input"]);
+            console.log(
+                `${result === test_parameters["output"] ? 'Passed' : 'FAILED'} -- ${test_parameters["input"]} -- Expected: ${test_parameters["output"]}, Actual: ${result}`
+            );
+            
+        }
+    );
+});

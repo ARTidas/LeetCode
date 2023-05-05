@@ -3,7 +3,19 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    return true;
+    if (
+        x
+            .toString()
+            .split('')
+            .reverse()
+            .join('')
+        ===
+        x.toString()
+    ) {
+        return true;
+    }
+
+    return false;
 };
 /* ********************************************************
  * ********************************************************

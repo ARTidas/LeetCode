@@ -38,7 +38,7 @@ var isValid = function(s) {
  * ********************************************************/
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log('-----------------------------------------------------------------------');
-    console.log('roman_to_integer.js');
+    console.log('valid_parentheses.js');
 
     test_calls = [
         {

@@ -22,7 +22,7 @@ var longestCommonPrefix = function(strs) {
  * ********************************************************/
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log('-----------------------------------------------------------------------');
-    console.log('roman_to_integer.js');
+    console.log('longest-common-prefix.js');
 
     test_calls = [
         {
